@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #DDDDDD;
+  --foreground: #323232;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+nav {
+  position: relative;
+}
+
+#navPointer {
+  z-index: 1;
+  position: absolute;
+  top: 0.6em;
+  left: 1em;
+  background-color: #bada55;
+  height: 1.8em;
+  transition: transform 0.25s ease-in-out;
+  border-radius: 0.3em;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.Typewriter{
+  display: inline;
+}
