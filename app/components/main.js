@@ -26,7 +26,7 @@ export default function Main() {
               opacity: 0
             },
             visible: {
-              scale: 1.2,
+              scale: 1,
               opacity: 1,
               transition: {
                 type: "spring",
@@ -39,9 +39,9 @@ export default function Main() {
         <div className="flex flex-wrap-reverse sm:flex-nowrap sm:items-center justify-center">
             {/* Intro Text */}
             <div className="m-4 sm:ml-10 lg:ml-22">
-                <div className='text-1em -mb-1'>Hi. I'm</div>
+                <div className='text-xl -mb-1'>Hi. I'm</div>
                 <div className={`text-8xl ${nameFont.className}`} >Kai Sheng</div>
-                <div className='-mt-4'>A
+                <div className='text-xl -mt-4'>A
                     <Typewriter 
                         options={{
                             cursor:"",
