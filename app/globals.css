@@ -21,6 +21,8 @@ body {
 
 nav {
   position: relative;
+  background-color: #DDDDDD;
+  z-index: 2;
 }
 
 #navPointer {

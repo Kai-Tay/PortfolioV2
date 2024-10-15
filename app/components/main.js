@@ -17,15 +17,16 @@ return splitter.splitGraphemes(string);
 console.log("I see you stalking! 👻")
 
 export default function Main() {
-    
+
     return (
+      <div className="h-dvh w-full flex sm:items-center justify-center">
         <motion.div initial="hidden" animate="visible" variants={{
             hidden: {
               scale: 0.7,
               opacity: 0
             },
             visible: {
-              scale: 0.98,
+              scale: 1.2,
               opacity: 1,
               transition: {
                 type: "spring",
@@ -35,7 +36,7 @@ export default function Main() {
               }
             },
           }}>
-        <div className="h-dvh w-full flex flex-wrap-reverse sm:flex-nowrap sm:items-center justify-center ">
+        <div className="flex flex-wrap-reverse sm:flex-nowrap sm:items-center justify-center">
             {/* Intro Text */}
             <div className="m-4 sm:ml-10 lg:ml-22">
                 <div className='text-1em -mb-1'>Hi. I'm</div>
@@ -63,6 +64,9 @@ export default function Main() {
             </div>
         </div>
         </motion.div>
+        </div>
+
+        
     )
 
 }
