@@ -6,9 +6,9 @@ import About from "./components/about";
 export default function Page() {
     
     return (
-        <div>
+        <div className="">
         <Navigation />
-        
+        <Main />
         <About />
         </div>
     )

@@ -3,7 +3,7 @@
 import Typewriter from 'typewriter-effect';
 import localFont from "next/font/local";
 import GraphemeSplitter from "grapheme-splitter";
-import { motion } from "framer-motion"
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const nameFont = localFont({
     src: "../fonts/LeagueSpartan-ExtraBold.ttf",
@@ -17,22 +17,26 @@ return splitter.splitGraphemes(string);
 console.log("I see you stalking! 👻")
 
 export default function Main() {
+  // Scroll Animation
+  const { scrollY } = useScroll(); // Track the scroll position
+  const opacity = useTransform(scrollY, [0, 350], [1, 0]); // Map scroll to opacity
 
     return (
-      <div className="h-dvh w-full flex sm:items-center justify-center">
-        <motion.div initial="hidden" animate="visible" variants={{
+      <div className="h-dvh w-full flex sm:items-center justify-center px-10">
+        <motion.div style={{ opacity }} initial="hidden" animate="visible" variants={{
             hidden: {
-              scale: 0.7,
-              opacity: 0
+              scale: 0.8,
+              opacity: 0,
+              y: 100,
             },
             visible: {
               scale: 1,
               opacity: 1,
+              y: 0,
               transition: {
                 type: "spring",
-                bounce: 0.25,
-                delay: 0.5,
-                duration: 0.5,
+                delay: 0,
+                duration: 2,
               }
             },
           }}>
