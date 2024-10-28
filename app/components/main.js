@@ -40,7 +40,7 @@ export default function Main() {
               }
             },
           }}>
-        <div className="flex flex-wrap-reverse sm:flex-nowrap sm:items-center justify-center">
+        <div className="flex flex-wrap-reverse sm:flex-nowrap sm:items-center justify-center mt-10">
             {/* Intro Text */}
             <div className="m-4 sm:ml-10 lg:ml-22">
                 <div className='text-xl -mb-1'>Hi. I'm</div>

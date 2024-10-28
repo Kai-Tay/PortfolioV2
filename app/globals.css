@@ -22,6 +22,7 @@ body {
 nav {
   position: relative;
   z-index: 2;
+  background-color: #ddddddd2;
 }
 
 #navPointer {
@@ -49,9 +50,10 @@ nav {
 .aboutContainer img {
   object-fit: cover; /* Make sure the image covers the entire area */
   position: absolute; /* Position image absolutely within the container */
+  z-index: 0;
 }
 
 .content {
   position: absolute; /* Position content absolutely */
-  z-index: 1; /* Ensure content is above the background image */
+  z-index: 0; /* Ensure content is above the background image */
 }
