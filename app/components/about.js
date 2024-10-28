@@ -1,5 +1,6 @@
 'use client'
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from 'next/image';
 
 export default function About() {
 
@@ -15,7 +16,7 @@ export default function About() {
     return (
         <div id="about" className="aboutContainer">
             <motion.div style={{ opacity }}>
-                <img src="/wallpaper.png" className="h-dvh w-full object-cover" />
+                <img src="/wallpaper.png" className="h-dvh w-full object-cover" alt="Emoji Background"/>
             </motion.div>
             <div className="h-dvh flex flex-col items-left justify-center content mx-10">
                 <div className="font-bold text-5xl lg:text-8xl text-center sm:text-left">About Me!</div>
