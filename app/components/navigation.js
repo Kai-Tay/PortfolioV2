@@ -17,7 +17,7 @@ export default function Navigation() {
     const [menu, setMenu] = useState(false);
     const handleHamburgerMenu = () => { setMenu(!menu) };
 
-    // Use Framer Motion's useScroll to track the page's scroll progress
+    // Use useScroll to track the page's scroll progress
     const { scrollYProgress } = useScroll();
 
     // Transform the scroll progress into a character count
@@ -33,8 +33,8 @@ export default function Navigation() {
     return (
         <div>
             <nav className="fixed w-full text-center px-10">
-                {/* LARGE WIDTH */}
-                <div id="defaultNav" className="w-full hidden md:flex items-center h-20" href="#">
+                {/* Normal Screen */}
+                <div id="defaultNav" className="w-full hidden lg:flex items-center h-20" href="#">
                     <a href="#">
                         <motion.div className="flex flex-initial items-center" style={{ width: '250px', height: '60px' }}>
                             <div className={`text-5xl text-left ${nameFont.className} mt-2`}>{text}</div>
@@ -51,7 +51,7 @@ export default function Navigation() {
                 <div>
                     {menu ? (
                         <div className="mt-4">
-                            <div className="md:hidden flex flex-inline justify-between" id="mobile-menu" >
+                            <div className="lg:hidden flex flex-inline justify-between" id="mobile-menu" >
                                 <div className="w-10"></div>
                                 <div className={`text-3xl text-center ${nameFont.className} mt-2`}>Kai Sheng</div>
                                 <div className="w-10 flex flex-inline justify-center items-center" onClick={handleHamburgerMenu}>
@@ -71,7 +71,7 @@ export default function Navigation() {
 
                     ) : (
                         <div className="mt-4">
-                            <div className="md:hidden flex flex-inline justify-between" id="mobile-menu" >
+                            <div className="lg:hidden flex flex-inline justify-between" id="mobile-menu" >
                                 <div className="w-10"></div>
                                 <div className={`text-3xl text-center ${nameFont.className} mt-2`}>Kai Sheng</div>
                                 <div className="w-10 flex flex-inline justify-center items-center" onClick={handleHamburgerMenu}>
