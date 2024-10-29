@@ -21,7 +21,7 @@ export default function About() {
                 <img src="/wallpaper.png" className="h-screen w-full object-cover" alt="Emoji Background"/>
             </motion.div>
             <motion.div className="h-screen flex flex-col items-left justify-center content mx-10" style={{ opacity: fadeOut }}>
-                <div className="font-bold text-5xl lg:text-8xl text-center sm:text-left">About Me!</div>
+                <div className="font-bold text-6xl md:text-8xl text-center sm:text-left">About Me!</div>
                 <div className="text-lg lg:text-xl lg:mr-96 my-4 text-center sm:text-left" style={{fontFamily:'League Spartan, sans-serif', fontWeight: '550'}}>
                     Hi! I’m Kai Sheng, a second-year Software Engineering student at SMU.
                     I’m passionate about exploring new languages and frameworks through hands-on projects, which I find to be the best way to learn. Outside of tech,
