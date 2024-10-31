@@ -24,22 +24,22 @@ export default function About() {
     });
 
     // Update resize
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            setWindowWidth(window.innerWidth);
+    // useEffect(() => {
+    //     if (typeof window !== "undefined") {
+    //         setWindowWidth(window.innerWidth);
 
-            const handleResize = () => setWindowWidth(window.innerWidth);
-            window.addEventListener('resize', handleResize);
+    //         const handleResize = () => setWindowWidth(window.innerWidth);
+    //         window.addEventListener('resize', handleResize);
 
-            return () => window.removeEventListener('resize', handleResize);
-        }
-    }, []);
+    //         return () => window.removeEventListener('resize', handleResize);
+    //     }
+    // }, []);
 
     // Image
-    const scale = useTransform(projectList, [0.1, 0.3], [0.5, 0.95])
-    const x = useTransform(projectList, [0.5, 0.6], [0, windowWidth]);
+    // const scale = useTransform(projectList, [0.1, 0.3], [0.5, 0.95])
+    // const x = useTransform(projectList, [0.5, 0.6], [0, windowWidth]);
 
 
     // Transform the scroll progress into a character count
