@@ -4,6 +4,7 @@ import Typewriter from 'typewriter-effect';
 import localFont from "next/font/local";
 import GraphemeSplitter from "grapheme-splitter";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from 'react';
 
 const nameFont = localFont({
     src: "../fonts/LeagueSpartan-ExtraBold.ttf",
@@ -17,30 +18,18 @@ return splitter.splitGraphemes(string);
 console.log("I see you stalking! 👻")
 
 export default function Main() {
+
   // Scroll Animation
-  const { scrollY } = useScroll(); // Track the scroll position
-  const opacity = useTransform(scrollY, [0, 350], [1, 0]); // Map scroll to opacity
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+      target: targetRef,
+      offset: ["start end", "end start"], // Starts when section enters view and ends when it exits
+  });
+  const fadeOut = useTransform(scrollYProgress, [0.6, 0.75], [1, 0]);
 
     return (
-      <div className="h-dvh w-full flex sm:items-center justify-center px-10">
-        <motion.div style={{ opacity }} initial="hidden" animate="visible" variants={{
-            hidden: {
-              scale: 0.8,
-              opacity: 0,
-              y: 100,
-            },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              y: 0,
-              transition: {
-                type: "spring",
-                delay: 0,
-                duration: 2,
-              }
-            },
-          }}>
-        <div className="flex flex-wrap-reverse sm:flex-nowrap sm:items-center justify-center mt-20 sm:mt-10">
+      <div id="" ref={targetRef} className="h-screen w-full flex sm:items-center justify-center px-10" >
+        <motion.div className="flex flex-wrap-reverse sm:flex-nowrap sm:items-center justify-center mt-20 sm:mt-10" style={{ opacity: fadeOut }}>
             {/* Intro Text */}
             <div className="m-4 sm:ml-10 lg:ml-22">
                 <div className='text-xl -mb-1'>Hi. I&apos;m</div>
@@ -66,10 +55,8 @@ export default function Main() {
                 alt="Main Image"
                 />
             </div>
-        </div>
         </motion.div>
         </div>
-
         
     )
 

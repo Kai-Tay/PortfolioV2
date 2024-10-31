@@ -13,11 +13,12 @@ export default function About() {
 
     // Adjust opacity transformations within the bounds of the section
     const opacity = useTransform(scrollYProgress, [0.4, 0.5, 0.7], [0, 0.3, 0]);
+    const y = useTransform(scrollYProgress, [0.4, 0.7], [0, -50]);
     const fadeOut = useTransform(scrollYProgress, [0.6, 0.7], [1, 0]);
 
     return (
         <div id="about" ref={targetRef}  className="aboutContainer">
-            <motion.div style={{ opacity }}>
+            <motion.div style={{ opacity,y }}>
                 <img src="/wallpaper.png" className="h-screen w-full object-cover" alt="Emoji Background"/>
             </motion.div>
             <motion.div className="h-screen flex flex-col items-left justify-center content mx-10" style={{ opacity: fadeOut }}>
