@@ -44,7 +44,7 @@ export default function Navigation() {
                         <div id="navPointer"></div>
                         <a href="#about" className="rounded-md px-3 py-2" aria-current="page">About Me</a>
                         <a href="#projects" className="rounded-md px-3 py-2" aria-current="page">Projects</a>
-                        <a href="#" className="rounded-md px-3 py-2" aria-current="page">Contact Me</a>
+                        <a href="#contact" className="rounded-md px-3 py-2" aria-current="page">Contact Me</a>
                     </div>
                 </div>
                 {/* Dropdown Burger */}
