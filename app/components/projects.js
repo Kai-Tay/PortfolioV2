@@ -68,7 +68,7 @@ export default function About() {
         {
             id: 'yippeetunes',
             title: 'YippeeTunes',
-            description: "Hi! I'm Kai Sheng, a second-year Software Engineering student at SMU. I'm passionate about exploring new languages and frameworks through hands-on projects, which I find to be the best way to learn. Outside of tech, I enjoy capturing moments with my film camera and playing volleyball—both give me a great balance between creativity and staying active."
+            description: "Yippee Tun.es is a Spotify recommendation application developed during the Data Associate Programme (DAP). \n It utilizes the Spotify API and Selenium to analyze user-provided playlists, generating personalized song recommendations based on this input. The app aims to help users discover music that aligns with their tastes by leveraging their existing playlists, making the recommendation process both engaging and intuitive."
         }
     ];
 
